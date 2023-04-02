@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app_test/model/model_quiz.dart';
 import 'package:quiz_app_test/screen/screen_quiz.dart';
+import 'dart:convert';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -46,14 +47,14 @@ class _HomeScreenState extends State<HomeScreen> {
             Center(
               child: Image.asset(
                 'images/quiz.jpeg',
-                width: width *0.6,
+                width: width *0.8,
               ),
             ),
             Padding(
               padding: EdgeInsets.all(width * 0.024),
             ),
             Text(
-              '플러터 퀴즈 앱',
+              '한국사능력검정시험 기출문제',
               style: TextStyle(
                 fontSize: width * 0.065,
                 fontWeight: FontWeight.bold,
