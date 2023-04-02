@@ -12,7 +12,7 @@ class _QuizScreenState extends State<QuizScreen> {
   List<int> _answers = [-1, -1, -1];
   List<bool> _answerState = [false, false, false, false];
   int _currentIndex = 0;
- 
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -34,4 +34,4 @@ class _QuizScreenState extends State<QuizScreen> {
       ),
     );
   }
-  }
+}
