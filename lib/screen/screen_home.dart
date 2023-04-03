@@ -36,8 +36,8 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         //Scaffold[비계]
         appBar: AppBar(
-          title: Text('My Quiz APP'),
-          backgroundColor: Colors.deepPurple,
+          title: Text(''),
+          backgroundColor: Color.fromARGB(255, 183, 150, 240),
           leading: Container(),
           centerTitle: true,
         ),
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             Center(
               child: Image.asset(
-                'images/quiz.jpeg',
+                'images/quiz.jpg',
                 width: width * 0.6,
               ),
             ),
@@ -55,22 +55,25 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.all(width * 0.024),
             ),
             Text(
-              '플러터 퀴즈 앱',
+              '한국사 문제은행',
               style: TextStyle(
                 fontSize: width * 0.065,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              '퀴즈를 풀기 전 안내사항입니다.\n꼼꼼히 읽고 퀴즈 풀기를 눌러주세요.',
+              '꼼꼼히 읽고 문제 풀기를 눌러주세요.',
               textAlign: TextAlign.center,
             ),
             Padding(
-              padding: EdgeInsets.all(width * 0.048),
+              padding: EdgeInsets.all(width * 0.0015),
             ),
-            _buildStep(width, '1. 랜덤으로 나오는 퀴즈 3개를 풀어보세요.'),
+
+            /*_buildStep(width, '1. 랜덤으로 나오는 퀴즈 3개를 풀어보세요.'),
             _buildStep(width, '2. 문제를 잘 읽고 정답을 고른 뒤\n다음 문제 버튼을 눌러주세요.'),
             _buildStep(width, '3. 만점을 향해 도전해보세요!'),
+            */
+
             Padding(
               padding: EdgeInsets.all(width * 0.048),
             ),
@@ -78,17 +81,21 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.only(bottom: width * 0.036),
               child: Center(
                 child: ButtonTheme(
-                  minWidth: width * 0.8,
-                  height: height * 0.05,
+                  minWidth: width * 0.5,
+                  height: height * 0.17,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: MaterialButton(
                     child: Text(
-                      '지금 퀴즈 풀기',
-                      style: TextStyle(color: Colors.white),
+                      '기본',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: width * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    color: Colors.deepPurple,
+                    color: Color.fromARGB(255, 233, 226, 126),
                     onPressed: () {},
                   ),
                   /* onPressed: () {
@@ -107,6 +114,30 @@ class _HomeScreenState extends State<HomeScreen> {
                       */
                 ),
               ),
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: width * 0.036),
+              child: Center(
+                child: ButtonTheme(
+                  minWidth: width * 0.5,
+                  height: height * 0.17,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: MaterialButton(
+                    child: Text(
+                      '심화',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: width * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    color: Color.fromARGB(255, 233, 226, 126),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
             )
           ],
         ),
@@ -114,6 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  /*
   Widget _buildStep(double width, String title) {
     return Container(
       padding: EdgeInsets.fromLTRB(
@@ -137,4 +169,5 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+  */
 }
