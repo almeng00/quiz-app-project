@@ -25,9 +25,10 @@ class ResultScreen extends StatelessWidget {
       child: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: Text('My Quiz APP'),
+            title: Text('한국사능력검정시험'),
             backgroundColor: Colors.deepPurple,
             leading: Container(),
+            centerTitle: true,
           ),
           body: Center(
             child: Container(
